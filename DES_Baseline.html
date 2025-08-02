@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delta Electric Systems</title>
+  <link id="theme-style" rel="stylesheet" href="DES_Prototype1.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="assets/placeholder-logo.png" alt="Delta Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown-parent">
+          <a href="#" id="products-link">Products ▼</a>
+          <ul class="dropdown" id="products-dropdown">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Electrical</a></li>
+            <li><a href="#">Electronics</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+      <input type="text" placeholder="Search..." class="search-bar" id="searchInput" />
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Powering the Future</h1>
+      <p>Distributing top-tier electric and electronic equipment globally.</p>
+    </section>
+
+    <section class="filters" id="filtersSection">
+      <label>
+        Category:
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="electrical">Electrical</option>
+          <option value="electronics">Electronics</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="productList" class="product-list">
+      <!-- Products will render here -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved.</p>
+      <p>Partners | Legal Rights | Privacy Policy</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
