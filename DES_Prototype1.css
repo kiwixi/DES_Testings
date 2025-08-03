@@ -9,7 +9,7 @@ html, body {
   background-color: #f9fafb;
   color: #222;
   display: flex;
-  flex-direction: 100vh;
+  flex-direction: column;
 }
 
 body > main {
@@ -17,12 +17,12 @@ body > main {
 }
 
 
-body {
+/*body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #eeeeee;
   color: #000000;
-}
+}*/
 
 .navbar {
   display: flex;
@@ -85,4 +85,5 @@ footer {
   text-align: center;
   padding: 1rem 2rem;
 }
+
 
