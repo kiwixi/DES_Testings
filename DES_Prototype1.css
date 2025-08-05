@@ -135,10 +135,54 @@ body {
   border-radius: 4px;
 }
 
+/* Hero Section */
 .hero {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #cccccc;
+    background: linear-gradient(rgba(4, 150, 199, 0.9), rgba(4, 150, 199, 0.9)), 
+                linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee),
+                linear-gradient(45deg, #eeeeee 25%, transparent 25%, transparent 75%, #eeeeee 75%, #eeeeee);
+    background-size: 20px 20px, 20px 20px;
+    background-position: 0 0, 10px 10px;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.cta-btn {
+    background: white;
+    color: #0496C7;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cta-btn:hover {
+    background: #eeeeee;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .filters {
@@ -155,6 +199,7 @@ footer {
   text-align: center;
   padding: 1rem 2rem;
 }
+
 
 
 
