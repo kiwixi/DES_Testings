@@ -3,155 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Delta Electric Systems</title>
+  <title>Delta Electric Systems - Powering the Future</title>
   <link id="theme-style" rel="stylesheet" href="DES_Prototype1.css" />
 </head>
 <body>
-  <header>
-    <!--This is the top bar of the website which it has the logo and etc..-->
-    <nav class="navbar">
-      <img src="placeholder-logo.png" alt="Delta Logo" class="logo" />
-     <!--Nav menu details-->
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown-parent">
-          <a href="#" id="products-link">Products ▼</a>
-          <ul class="dropdown" id="products-dropdown">
-            <li><a href="#">All Products</a></li>
-            <li><a href="#">Electrical</a></li>
-            <li><a href="#">Electronics</a></li>
-          </ul>
-           <!--Brief bullet list-->
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-      <!--Search Bar Details-->
-      <input type="text" placeholder="Search Products, Brands, Wires..." class="search-bar" id="searchInput" />
-    </nav>
-    
+  <header class="header">
+    <div class="header-content">
+      <a href="#home" class="logo">Delta Electric Systems</a>
+      
+      <div class="search-bar">
+        <input type="text" placeholder="Search Products, Brands, Wires..." id="searchInput" />
+        <button class="search-btn">Search</button>
+      </div>
+      
+      <a href="#login" class="login-btn">Login</a>
+    </div>
   </header>
 
-<!-- the attention grabber-->
-    <section class="hero" id="home">
-      <div class="hero-content">
-      <h1>Powering the Future</h1>
-      <p>Distributing top-tier electric and electronic equipment globally.</p>
-        <a href="#products" class="cta-btn">Browse Products</a>
-      </div>
-    </section>
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown-parent">
+          <a href="#products" id="products-link">Products</a>
+          <ul class="dropdown" id="products-dropdown">
+            <li><a href="#electrical">Electrical</a></li>
+            <li><a href="#electronics">Electronics</a></li>
+            <li><a href="#automation">Automation</a></li>
+            <li><a href="#industrial">Industrial</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#map">Coverage Map</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  
-    <!-- Features Section -->
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Powering the Future</h1>
+      <p>Distributing top-tier electric and electronic equipment globally with unmatched service and reliability.</p>
+      <a href="#products" class="cta-btn">Browse Products</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
   <section class="features">
     <div class="features-content">
       <h2>Why Choose Delta Electric Systems?</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon"></div>
-          <h3>Inventory</h3>
-          <p>Over 300 Products</p>
+          <div class="feature-icon">ðŸ“¦</div>
+          <h3>Extensive Inventory</h3>
+          <p>Over 10,000 products from leading manufacturers, ensuring you find exactly what you need.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"></div>
-          <h3>Excellent Support</h3>
-          <p>Expert technical support</p>
+          <div class="feature-icon">ðŸ”§</div>
+          <h3>Expert Technical Support</h3>
+          <p>Our certified engineers provide comprehensive technical assistance and product recommendations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">ðŸšš</div>
+          <h3>Fast Delivery</h3>
+          <p>Same-day shipping available with nationwide distribution centers for rapid fulfillment.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">ðŸŒ</div>
+          <h3>Global Reach</h3>
+          <p>Serving customers worldwide with localized support and international shipping capabilities.</p>
         </div>
       </div>
-      </section>
-        <!-- The end of the features cards -->
+    </div>
+  </section>
 
-   <!--Filters-->
-    <section class="filters" id="filtersSection">
-      <label>
-        Category:
-        <select id="categoryFilter">
-          <option value="all">All</option>
-          <option value="electrical">Electrical</option>
-          <option value="electronics">Electronics</option>
-        </select>
-      </label>
-    </section>
+  <!-- Products Section with Filters -->
+  <section class="products-section" id="products">
+    <div class="products-content">
+      <h2>Featured Products</h2>
+      
+      <!-- Product Filters -->
+      <div class="filters" id="filtersSection">
+        <div class="filter-group">
+          <label for="categoryFilter">Category:</label>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="electrical">Electrical</option>
+            <option value="electronics">Electronics</option>
+            <option value="automation">Automation</option>
+            <option value="industrial">Industrial</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="brandFilter">Brand:</label>
+          <select id="brandFilter">
+            <option value="all">All Brands</option>
+            <option value="siemens">Siemens</option>
+            <option value="schneider">Schneider Electric</option>
+            <option value="abb">ABB</option>
+            <option value="ge">General Electric</option>
+          </select>
+        </div>
 
-        <!-- Products will render here -->
-    <section class="products-preview">
-      <div class="products-content">
-        <h2>Featured Products</h2>
-        <div class="products-grid">
-          <div class="product-category">
-            <h3>Types of Products</h3>
-            <p>Servos, Arduinos, etc..</p>
-            <a href="#" class="category-btn">Shop Now</a>
-          </div>
+        <div class="filter-group">
+          <label for="priceFilter">Price Range:</label>
+          <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="under100">Under $100</option>
+            <option value="100-500">$100 - $500</option>
+            <option value="500-1000">$500 - $1,000</option>
+            <option value="over1000">Over $1,000</option>
+          </select>
         </div>
       </div>
       
-    </section>
+      <div class="products-grid">
+        <div class="product-category" data-category="electrical">
+          <h3>Electrical Components</h3>
+          <p>Switches, outlets, breakers, panels, and complete electrical systems for residential and commercial applications.</p>
+          <a href="#electrical" class="category-btn">Shop Electrical</a>
+        </div>
+        
+        <div class="product-category" data-category="electronics">
+          <h3>Electronic Controls</h3>
+          <p>PLCs, HMIs, sensors, relays, and advanced control systems for industrial automation and monitoring.</p>
+          <a href="#electronics" class="category-btn">Shop Electronics</a>
+        </div>
+        
+        <div class="product-category" data-category="automation">
+          <h3>Automation Solutions</h3>
+          <p>Servos, drives, motors, robotics, and complete automation packages for manufacturing efficiency.</p>
+          <a href="#automation" class="category-btn">Shop Automation</a>
+        </div>
+        
+        <div class="product-category" data-category="industrial">
+          <h3>Industrial Equipment</h3>
+          <p>Transformers, generators, power distribution equipment, and heavy-duty industrial machinery.</p>
+          <a href="#industrial" class="category-btn">Shop Industrial</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Products ends -->
-  <!-- Contacts Information Begins -->
-<section class="contact-section" id="contact">
-  <div class="contact-content">
-    <h2>Get In Contact With Us!</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <div class="contact-item">
-          <strong>Sales</strong> Insert Number
+  <!-- About Us Preview -->
+  <section class="about-preview" id="about">
+    <div class="about-content">
+      <h2>About Delta Electric Systems</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>With over 30 years of experience in electrical distribution, Delta Electric Systems has built a reputation for excellence in serving industrial, commercial, and residential markets worldwide.</p>
+          <p>Our commitment to quality, innovation, and customer service has made us a trusted partner for electrical contractors, engineers, and facility managers across diverse industries.</p>
+          <a href="#about-full" class="learn-more-btn">Learn More About Us</a>
         </div>
-        <div class="contact-item">
-          <strong>Email:</strong> Insert Email
+        <div class="about-stats">
+          <div class="stat-item">
+            <h3>30+</h3>
+            <p>Years of Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>10,000+</h3>
+            <p>Products Available</p>
+          </div>
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>Countries Served</p>
+          </div>
         </div>
-        <div class="contact-item">
-          <strong>Hours</strong> Monday - Friday 7:00 AM - 5:00 PM EST
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section" id="map">
+    <div class="map-content">
+      <h2>Global Supply Chain Coverage</h2>
+      <p>Our extensive network of distribution centers and partnerships ensures reliable delivery worldwide.</p>
+      
+      <div class="map-placeholder">
+        <div class="map-info">
+          <h3>Coverage Areas</h3>
+          <ul>
+            <li>North America - 15 Distribution Centers</li>
+            <li>Europe - 8 Regional Offices</li>
+            <li>Asia Pacific - 12 Partner Locations</li>
+            <li>Latin America - 6 Service Centers</li>
+            <li>Middle East & Africa - 4 Regional Hubs</li>
+          </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers Preview -->
+  <section class="careers-preview" id="careers">
+    <div class="careers-content">
+      <h2>Join Our Team</h2>
+      <p>Discover exciting career opportunities in the electrical distribution industry.</p>
+      <div class="careers-grid">
+        <div class="career-card">
+          <h3>Sales Engineers</h3>
+          <p>Drive growth and build relationships with key customers.</p>
+        </div>
+        <div class="career-card">
+          <h3>Technical Specialists</h3>
+          <p>Provide expert product knowledge and application support.</p>
+        </div>
+        <div class="career-card">
+          <h3>Operations Team</h3>
+          <p>Ensure efficient logistics and inventory management.</p>
+        </div>
+      </div>
+      <a href="#careers-full" class="careers-btn">View All Positions</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-content">
+      <h2>Get In Touch With Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <strong>Sales:</strong> +1 (555) 123-4567
+          </div>
+          <div class="contact-item">
+            <strong>Technical Support:</strong> +1 (555) 123-4568
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong> info@tichnia.com
+          </div>
+          <div class="contact-item">
+            <strong>Hours:</strong> Monday - Friday 7:00 AM - 5:00 PM EST
+          </div>
+          <div class="contact-item">
+            <strong>Address:</strong> 123 Industrial Blvd, Tech City, TC 12345
+          </div>
+        </div>
+        
         <div class="contact-form">
           <h3>Send Us a Message</h3>
-          <form>
+          <form id="contactForm">
             <input type="text" placeholder="Your Name" required>
-            <input type="text" placeholder="Your Email" required>
+            <input type="email" placeholder="Your Email" required>
             <input type="text" placeholder="Company">
+            <input type="tel" placeholder="Phone Number">
+            <select required>
+              <option value="">Select Inquiry Type</option>
+              <option value="sales">Sales Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="careers">Career Opportunities</option>
+              <option value="general">General Question</option>
+            </select>
             <textarea placeholder="Your Message" rows="4" required></textarea>
             <button type="submit" class="submit-btn">Send Message</button>
           </form>
         </div>
       </div>
     </div>
-  </div>
-</section>
-        
-  <!-- Contacts Information Ends -->
- <!-- Footer Details Begins -->
+  </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
         <h3>Company</h3>
         <ul>
-          <li><a href="#">About Us</li>
-          <li><a href="#">Careers</li>
-          <li><a href="#">News & Updates</li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#news">News & Updates</a></li>
+          <li><a href="#investors">Investor Relations</a></li>
         </ul>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 Delta Electric Systems. All rights reserved.</p>
-          <p>Partners | Legal Rights | Privacy Policy</p>
-        </div>
-     
+      </div>
+      
+      <div class="footer-section">
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="#electrical">Electrical</a></li>
+          <li><a href="#electronics">Electronics</a></li>
+          <li><a href="#automation">Automation</a></li>
+          <li><a href="#support">Technical Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#support">Help Center</a></li>
+          <li><a href="#shipping">Shipping Info</a></li>
+          <li><a href="#returns">Returns & Exchanges</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#legal">Legal Rights</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved.</p>
+      <p><a href="#partners">Partners</a> | <a href="#legal">Legal Rights</a> | <a href="#privacy">Privacy Policy</a></p>
     </div>
   </footer>
-  <!-- Footer Details Ends -->
 
-        <!-- Script details are to be determined later -->
   <script src="script.js"></script>
-     
 </body>
 </html>
-
-
-
-
-
-
