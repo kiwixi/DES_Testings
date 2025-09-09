@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Careers - Delta Electric Systems</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="global-info">
+          <span><i class="fas fa-globe-americas"></i> Global Operations: 50+ Countries</span>
+          <span><i class="fas fa-shipping-fast"></i> Same-Day Shipping Available</span>
+        </div>
+        <div class="support-info">
+          <span><i class="fas fa-phone"></i> 24/7 Support: +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@tichnia.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder">
+            <img src="images/logo.png" alt="Delta Electric Systems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback">Δ</div>
+          </div>
+          <div class="logo-text">
+            <a href="index.html" class="logo-main">Delta Electric Systems</a>
+            <div class="logo-sub">Global Industrial Distribution</div>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search 50,000+ products, parts, manufacturers..." id="searchInput">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <button class="login-btn" onclick="showLoginModal()">Login</button>
+          <button class="admin-btn hidden" id="adminBtn" onclick="toggleAdmin()">Admin Panel</button>
+          <button class="customer-btn hidden" id="customerBtn" onclick="showCustomerDashboard()">My Account</button>
+          <button class="logout-btn hidden" id="logoutBtn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html?category=electrical">Electrical Components</a></li>
+            <li><a href="products.html?category=automation">Automation & Control</a></li>
+            <li><a href="products.html?category=power">Power Distribution</a></li>
+            <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+            <li><a href="products.html?category=safety">Safety & Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html" class="active">Careers</a></li>
+        <li><a href="coverage-map.html">Global Coverage</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+      <div class="careers-hero-content">
+        <h1>Build Your Career With Us</h1>
+        <p>Join our international team of electrical and industrial experts shaping the future of global industry</p>
+        <div class="careers-highlights">
+          <div class="career-highlight">
+            <i class="fas fa-users"></i>
+            <span>500+ Team Members</span>
+          </div>
+          <div class="career-highlight">
+            <i class="fas fa-globe-americas"></i>
+            <span>15 Global Offices</span>
+          </div>
+          <div class="career-highlight">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Continuous Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="section why-work">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Delta Electric</h2>
+        <p class="section-subtitle">Be part of a global team that's powering the world's critical infrastructure</p>
+      </div>
+      
+      <div class="why-work-content">
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Career Growth</h3>
+            <p>Clear advancement paths with mentorship programs and leadership development opportunities across our global operations.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Comprehensive Benefits</h3>
+            <p>Competitive salary, health insurance, retirement plans, and performance bonuses with global mobility opportunities.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3>Modern Work Environment</h3>
+            <p>State-of-the-art facilities, latest technology, flexible work arrangements, and collaborative team culture.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Learning & Development</h3>
+            <p>Continuous training programs, industry certifications, conference attendance, and technical skills development.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3>Work-Life Balance</h3>
+            <p>Flexible schedules, remote work options, generous PTO, and family-friendly policies that support your lifestyle.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Global Impact</h3>
+            <p>Work on projects that power critical infrastructure and industrial operations across 50+ countries worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="section open-positions">
+      <div class="section-header">
+        <h2 class="section-title">Current Opportunities</h2>
+        <p class="section-subtitle">Explore available positions across our global operations</p>
+      </div>
+      
+      <div class="positions-content">
+        <div class="positions-filter">
+          <h3>Filter by Department</h3>
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterJobs('all')">All Positions</button>
+            <button class="filter-btn" onclick="filterJobs('engineering')">Engineering</button>
+            <button class="filter-btn" onclick="filterJobs('sales')">Sales</button>
+            <button class="filter-btn" onclick="filterJobs('operations')">Operations</button>
+            <button class="filter-btn" onclick="filterJobs('corporate')">Corporate</button>
+          </div>
+        </div>
+
+        <div class="positions-grid" id="positionsGrid">
+          <div class="position-card" data-department="engineering">
+            <div class="position-header">
+              <h3>Senior Electrical Engineer</h3>
+              <div class="position-meta">
+                <span class="location">North America</span>
+                <span class="type">Full-time</span>
+              </div>
+            </div>
+            <p>Lead electrical system design and provide technical expertise for complex industrial automation projects across multiple industries.</p>
+            <ul class="requirements">
+              <li>Bachelor's degree in Electrical Engineering</li>
+              <li>5+ years industrial experience</li>
+              <li>PLC programming and HMI design</li>
+              <li>Project management experience</li>
+            </ul>
+            <button class="apply-btn" onclick="applyForJob('Senior Electrical Engineer')">Apply Now</button>
+          </div>
+
+          <div class="position-card" data-department="sales">
+            <div class="position-header">
+              <h3>Regional Sales Manager</h3>
+              <div class="position-meta">
+                <span class="location">Europe</span>
+                <span class="type">Full-time</span>
+              </div>
+            </div>
+            <p>Drive business growth by developing key customer relationships and expanding market presence in European industrial sectors.</p>
+            <ul class="requirements">
+              <li>Bachelor's degree in Engineering or Business</li>
+              <li>3+ years B2B sales experience</li>
+              <li>Fluency in English and one European language</li>
+              <li>Industrial automation knowledge preferred</li>
+            </ul>
+            <button class="apply-btn" onclick="applyForJob('Regional Sales Manager')">Apply Now</button>
+          </div>
+
+          <div class="position-card" data-department="operations">
+            <div class="position-header">
+              <h3>Supply Chain Coordinator</h3>
+              <div class="position-meta">
+                <span class="location">Asia Pacific</span>
+                <span class="type">Full-time</span>
+              </div>
+            </div>
+            <p>Manage global supply chain operations, vendor relationships, and inventory optimization for our APAC distribution network.</p>
+            <ul class="requirements">
+              <li>Bachelor's degree in Supply Chain or Logistics</li>
+              <li>2+ years supply chain experience</li>
+              <li>ERP system proficiency</li>
+              <li>Strong analytical and communication skills</li>
+            </ul>
+            <button class="apply-btn" onclick="applyForJob('Supply Chain Coordinator')">Apply Now</button>
+          </div>
+
+          <div class="position-card" data-department="engineering">
+            <div class="position-header">
+              <h3>Application Engineer</h3>
+              <div class="position-meta">
+                <span class="location">Global - Remote</span>
+                <span class="type">Full-time</span>
+              </div>
+            </div>
+            <p>Provide technical support and application guidance to customers implementing industrial electrical solutions worldwide.</p>
+            <ul class="requirements">
+              <li>Electrical or Mechanical Engineering degree</li>
+              <li>Industrial automation experience</li>
+              <li>Customer-facing technical support skills</li>
+              <li>Willingness to travel (25%)</li>
+            </ul>
+            <button class="apply-btn" onclick="applyForJob('Application Engineer')">Apply Now</button>
+          </div>
+
+          <div class="position-card" data-department="corporate">
+            <div class="position-header">
+              <h3>Digital Marketing Specialist</h3>
+              <div class="position-meta">
+                <span class="location">North America</span>
+                <span class="type">Full-time</span>
+              </div>
+            </div>
+            <p>Develop and execute digital marketing strategies to promote our global industrial electrical distribution services.</p>
+            <ul class="requirements">
+              <li>Bachelor's degree in Marketing or Communications</li>
+              <li>3+ years digital marketing experience</li>
+              <li>B2B marketing experience preferred</li>
+              <li>SEO, SEM, and social media expertise</li>
+            </ul>
+            <button class="apply-btn" onclick="applyForJob('Digital Marketing Specialist')">Apply Now</button>
+          </div>
+
+          <div class="position-card" data-department="operations">
+            <div class="position-header">
+              <h3>Warehouse Operations Manager</h3>
+              <div class="position-meta">
+                <span class="location">Latin America</span>
+                <span class="type">Full-time</span>
+              </div>
+            </div>
+            <p>Oversee warehouse operations, logistics coordination, and team management for our Latin American distribution center.</p>
+            <ul class="requirements">
+              <li>Bachelor's degree in Operations or Logistics</li>
+              <li>5+ years warehouse management experience</li>
+              <li>Team leadership and staff development</li>
+              <li>Bilingual Spanish/English required</li>
+            </ul>
+            <button class="apply-btn" onclick="applyForJob('Warehouse Operations Manager')">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="no-positions hidden" id="noPositions">
+          <p>No positions found for the selected department. Please check other departments or contact our HR team directly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="industrial-banner">
+      <div class="banner-content">
+        <div class="banner-item">
+          <i class="fas fa-file-alt"></i>
+          <h3>Step 1: Apply</h3>
+          <p>Submit your application and resume through our online portal</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-video"></i>
+          <h3>Step 2: Interview</h3>
+          <p>Participate in technical and cultural fit interviews with our team</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-handshake"></i>
+          <h3>Step 3: Offer</h3>
+          <p>Receive a comprehensive offer package and join our global team</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-rocket"></i>
+          <h3>Step 4: Onboard</h3>
+          <p>Complete onboarding and begin your journey with Delta Electric</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Programs -->
+    <section class="section careers-section">
+      <div class="section-header">
+        <h2 class="section-title">Student & Graduate Programs</h2>
+        <p class="section-subtitle">Launch your career in industrial electrical distribution</p>
+      </div>
+      
+      <div class="careers-content">
+        <div class="careers-grid">
+          <div class="career-card">
+            <h3>Engineering Internship</h3>
+            <p><strong>Duration:</strong> 3-6 months</p>
+            <p>Gain hands-on experience with industrial automation projects, work alongside senior engineers, and contribute to real customer solutions.</p>
+            <div class="program-benefits">
+              <span class="benefit-tag">Paid Position</span>
+              <span class="benefit-tag">Mentorship</span>
+              <span class="benefit-tag">Full-time Potential</span>
+            </div>
+            <button class="btn-outline" onclick="applyForProgram('Engineering Internship')">Apply</button>
+          </div>
+
+          <div class="career-card">
+            <h3>Graduate Trainee Program</h3>
+            <p><strong>Duration:</strong> 18 months</p>
+            <p>Comprehensive rotational program across sales, engineering, and operations with structured learning and development.</p>
+            <div class="program-benefits">
+              <span class="benefit-tag">Global Rotation</span>
+              <span class="benefit-tag">Leadership Training</span>
+              <span class="benefit-tag">Career Path</span>
+            </div>
+            <button class="btn-outline" onclick="applyForProgram('Graduate Trainee Program')">Apply</button>
+          </div>
+
+          <div class="career-card">
+            <h3>Co-op Program</h3>
+            <p><strong>Duration:</strong> 4-8 months</p>
+            <p>Work-study program for engineering and business students to gain practical experience while completing their degree.</p>
+            <div class="program-benefits">
+              <span class="benefit-tag">Academic Credit</span>
+              <span class="benefit-tag">Flexible Schedule</span>
+              <span class="benefit-tag">Skills Development</span>
+            </div>
+            <button class="btn-outline" onclick="applyForProgram('Co-op Program')">Apply</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Employee Testimonials -->
+    <section class="section testimonials">
+      <div class="section-header">
+        <h2 class="section-title">Employee Stories</h2>
+        <p class="section-subtitle">Hear from our team members around the world</p>
+      </div>
+      
+      <div class="testimonials-content">
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"The technical challenges and global scope of projects at Delta Electric have accelerated my career growth beyond what I thought possible. The mentorship and learning opportunities are exceptional."</p>
+            </div>
+            <div class="testimonial-author">
+              <h4>[PLACEHOLDER: Employee Name]</h4>
+              <p>Senior Application Engineer - [PLACEHOLDER: Location]</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"Working with customers across different industries and countries has expanded my perspective and skills. The company's commitment to innovation and quality is evident in every project."</p>
+            </div>
+            <div class="testimonial-author">
+              <h4>[PLACEHOLDER: Employee Name]</h4>
+              <p>Regional Sales Manager - [PLACEHOLDER: Location]</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"The work-life balance and professional development opportunities make this an ideal place to build a long-term career. I've grown from an intern to a team leader here."</p>
+            </div>
+            <div class="testimonial-author">
+              <h4>[PLACEHOLDER: Employee Name]</h4>
+              <p>Operations Manager - [PLACEHOLDER: Location]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Delta Electric</a></li>
+          <li><a href="#placeholder">Leadership Team</a></li>
+          <li><a href="careers.html">Global Careers</a></li>
+          <li><a href="#placeholder">News & Press</a></li>
+          <li><a href="#placeholder">Investor Relations</a></li>
+          <li><a href="#placeholder">Sustainability</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="products.html?category=electrical">Electrical Components</a></li>
+          <li><a href="products.html?category=automation">Automation & Control</a></li>
+          <li><a href="products.html?category=power">Power Distribution</a></li>
+          <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+          <li><a href="#placeholder">Engineering Services</a></li>
+          <li><a href="#placeholder">Technical Training</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#placeholder">24/7 Technical Support</a></li>
+          <li><a href="#placeholder">Product Documentation</a></li>
+          <li><a href="#placeholder">Warranty Information</a></li>
+          <li><a href="#placeholder">Returns & Exchanges</a></li>
+          <li><a href="#placeholder">Global Shipping Info</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Partners & Legal</h3>
+        <ul>
+          <li><a href="#placeholder">Manufacturing Partners</a></li>
+          <li><a href="#placeholder">Authorized Distributors</a></li>
+          <li><a href="#placeholder">Legal Rights</a></li>
+          <li><a href="#placeholder">Privacy Policy</a></li>
+          <li><a href="#placeholder">Terms of Service</a></li>
+          <li><a href="#placeholder">Compliance & Certifications</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved. Global leader in industrial electrical distribution.</p>
+      <p>
+        <a href="#placeholder">Partners</a> | 
+        <a href="#placeholder">Legal Rights</a> | 
+        <a href="#placeholder">Privacy Policy</a> | 
+        <a href="#placeholder">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      
+      <div class="login-type-selection">
+        <button class="login-type-btn active" onclick="switchLoginType('customer')">Customer Login</button>
+        <button class="login-type-btn" onclick="switchLoginType('admin')">Administrator</button>
+      </div>
+
+      <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="password" id="customerPassword" placeholder="Password" required>
+        <button type="submit">Login to Account</button>
+        <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Create Account</a></p>
+      </form>
+
+      <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+        <input type="text" id="adminUsername" placeholder="Administrator Username" required>
+        <input type="password" id="adminPassword" placeholder="Administrator Password" required>
+        <button type="submit">Access Admin Panel</button>
+      </form>
+
+      <form id="registerForm" class="hidden" onsubmit="handleRegistration(event)">
+        <input type="text" id="regFirstName" placeholder="First Name" required>
+        <input type="text" id="regLastName" placeholder="Last Name" required>
+        <input type="email" id="regEmail" placeholder="Email Address" required>
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCompany" placeholder="Company Name">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+        <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+      </form>
+
+      <div class="error-message" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Admin Controls (Only visible to admins) -->
+  <div class="admin-controls hidden" id="adminControls">
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('products')">Product Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('accounts')">Account Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('orders')">Order Management</button>
+    </div>
+
+    <div class="admin-tab-content active" id="productsTab">
+      <h3>Product Management System</h3>
+      <div class="admin-form">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productBrand" placeholder="Brand/Manufacturer">
+        <input type="number" id="productPrice" placeholder="Price (USD)">
+        <select id="productCategory">
+          <option value="">Select Category</option>
+          <option value="electrical">Electrical Components</option>
+          <option value="automation">Automation & Control</option>
+          <option value="power">Power Distribution</option>
+          <option value="industrial">Industrial Equipment</option>
+          <option value="safety">Safety & Protection</option>
+        </select>
+        <input type="text" id="productDescription" placeholder="Product Description">
+        <button onclick="addProduct()">Add Product</button>
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="accountsTab">
+      <h3>Customer Account Management</h3>
+      <div class="accounts-list" id="accountsList">
+        <!-- Customer accounts will be loaded here -->
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="ordersTab">
+      <h3>Order Management System</h3>
+      <p>Order management features coming soon...</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Careers page specific JavaScript
+    function filterJobs(department) {
+      const cards = document.querySelectorAll('.position-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      const noPositions = document.getElementById('noPositions');
+      
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Filter positions
+      let visibleCount = 0;
+      cards.forEach(card => {
+        if (department === 'all' || card.dataset.department === department) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // Show/hide no positions message
+      if (visibleCount === 0) {
+        noPositions.classList.remove('hidden');
+      } else {
+        noPositions.classList.add('hidden');
+      }
+    }
+
+    function applyForJob(jobTitle) {
+      alert(`Thank you for your interest in the ${jobTitle} position!\n\nOur full application system is coming soon. Please send your resume and cover letter to careers@tichnia.com with the job title in the subject line.\n\nWe will review your application and contact you within 5 business days.`);
+    }
+
+    function applyForProgram(programName) {
+      alert(`Thank you for your interest in our ${programName}!\n\nApplication details:\n• Submit resume and transcripts\n• Complete online application\n• Participate in interview process\n\nEmail: students@tichnia.com\nWe review applications on a rolling basis.`);
+    }
+  </script>
+</body>
+</html>
