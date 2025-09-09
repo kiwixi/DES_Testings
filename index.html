@@ -25,10 +25,44 @@
       </div>
     </div>
 
+    <!-- Main Header -->
+    <div class="header-main">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder">
+            <!-- Replace this with actual logo -->
+            <img src="images/logo.png" alt="Delta Electric Systems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback">Δ</div>
+          </div>
+          <div class="logo-text">
+            <a href="index.html" class="logo-main">Delta Electric Systems</a>
+            <div class="logo-sub">Global Industrial Distribution</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search 50,000+ products, parts, manufacturers..." id="searchInput">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <button class="login-btn" onclick="showLoginModal()">Login</button>
+          <button class="admin-btn hidden" id="adminBtn" onclick="toggleAdmin()">Admin Panel</button>
+          <button class="customer-btn hidden" id="customerBtn" onclick="showCustomerDashboard()">My Account</button>
+          <button class="logout-btn hidden" id="logoutBtn" onclick="logout()">Logout</button>
+        </div>
 
-
-
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
 
     
   </header>
@@ -332,5 +366,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
