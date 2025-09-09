@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Coverage - Delta Electric Systems</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="global-info">
+          <span><i class="fas fa-globe-americas"></i> Global Operations: 50+ Countries</span>
+          <span><i class="fas fa-shipping-fast"></i> Same-Day Shipping Available</span>
+        </div>
+        <div class="support-info">
+          <span><i class="fas fa-phone"></i> 24/7 Support: +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@tichnia.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder">
+            <img src="images/logo.png" alt="Delta Electric Systems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback">Δ</div>
+          </div>
+          <div class="logo-text">
+            <a href="index.html" class="logo-main">Delta Electric Systems</a>
+            <div class="logo-sub">Global Industrial Distribution</div>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search 50,000+ products, parts, manufacturers..." id="searchInput">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <button class="login-btn" onclick="showLoginModal()">Login</button>
+          <button class="admin-btn hidden" id="adminBtn" onclick="toggleAdmin()">Admin Panel</button>
+          <button class="customer-btn hidden" id="customerBtn" onclick="showCustomerDashboard()">My Account</button>
+          <button class="logout-btn hidden" id="logoutBtn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html?category=electrical">Electrical Components</a></li>
+            <li><a href="products.html?category=automation">Automation & Control</a></li>
+            <li><a href="products.html?category=power">Power Distribution</a></li>
+            <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+            <li><a href="products.html?category=safety">Safety & Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="coverage-map.html" class="active">Global Coverage</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Coverage Hero -->
+    <section class="coverage-hero">
+      <div class="coverage-hero-content">
+        <h1>Global Distribution Network</h1>
+        <p>Strategic locations worldwide ensure rapid delivery and local support</p>
+        <div class="coverage-highlights">
+          <div class="coverage-highlight">
+            <i class="fas fa-shipping-fast"></i>
+            <span>Same-Day Delivery</span>
+          </div>
+          <div class="coverage-highlight">
+            <i class="fas fa-warehouse"></i>
+            <span>15 Distribution Centers</span>
+          </div>
+          <div class="coverage-highlight">
+            <i class="fas fa-globe-americas"></i>
+            <span>6 Continents</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="section map-section">
+      <div class="map-content">
+        <div class="map-container">
+          <div class="map-placeholder">
+            <h3>Interactive Global Coverage Map</h3>
+            <p>Our worldwide distribution network spans 6 continents with 15 major distribution centers, ensuring rapid delivery and local technical support for your industrial electrical needs.</p>
+            <div class="map-features">
+              <div class="map-feature">
+                <i class="fas fa-clock"></i>
+                <span>24/7 Operations</span>
+              </div>
+              <div class="map-feature">
+                <i class="fas fa-truck"></i>
+                <span>Express Shipping</span>
+              </div>
+              <div class="map-feature">
+                <i class="fas fa-headset"></i>
+                <span>Local Support</span>
+              </div>
+            </div>
+            <p class="map-note">[PLACEHOLDER: Interactive map integration coming soon - Client can add custom map service or embed]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regional Coverage Stats -->
+    <section class="section regional-stats">
+      <div class="section-header">
+        <h2 class="section-title">Regional Distribution Network</h2>
+        <p class="section-subtitle">Comprehensive coverage across all major industrial markets</p>
+      </div>
+      
+      <div class="regional-stats-content">
+        <div class="coverage-stats">
+          <div class="coverage-item">
+            <div class="coverage-icon">
+              <i class="fas fa-flag-usa"></i>
+            </div>
+            <h4>North America</h4>
+            <div class="coverage-details">
+              <p><strong>6 Distribution Centers</strong></p>
+              <p>USA: 4 locations</p>
+              <p>Canada: 1 location</p>
+              <p>Mexico: 1 location</p>
+              <p><strong>Coverage:</strong> 99% next-day delivery</p>
+              <p><strong>Warehouse Space:</strong> 500,000+ sq ft</p>
+            </div>
+            <button class="btn-outline" onclick="showRegionDetails('North America')">View Details</button>
+          </div>
+
+          <div class="coverage-item">
+            <div class="coverage-icon">
+              <i class="fas fa-map"></i>
+            </div>
+            <h4>Europe</h4>
+            <div class="coverage-details">
+              <p><strong>4 Regional Hubs</strong></p>
+              <p>Western Europe: 2 locations</p>
+              <p>Central Europe: 1 location</p>
+              <p>Nordic Region: 1 location</p>
+              <p><strong>Coverage:</strong> EU-wide distribution</p>
+              <p><strong>Warehouse Space:</strong> 300,000+ sq ft</p>
+            </div>
+            <button class="btn-outline" onclick="showRegionDetails('Europe')">View Details</button>
+          </div>
+
+          <div class="coverage-item">
+            <div class="coverage-icon">
+              <i class="fas fa-globe-asia"></i>
+            </div>
+            <h4>Asia Pacific</h4>
+            <div class="coverage-details">
+              <p><strong>3 Major Facilities</strong></p>
+              <p>Southeast Asia: 1 location</p>
+              <p>Northeast Asia: 1 location</p>
+              <p>Australia/NZ: 1 location</p>
+              <p><strong>Coverage:</strong> 12 countries served</p>
+              <p><strong>Warehouse Space:</strong> 250,000+ sq ft</p>
+            </div>
+            <button class="btn-outline" onclick="showRegionDetails('Asia Pacific')">View Details</button>
+          </div>
+
+          <div class="coverage-item">
+            <div class="coverage-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h4>Latin America</h4>
+            <div class="coverage-details">
+              <p><strong>1 Service Center</strong></p>
+              <p>Brazil: Primary hub</p>
+              <p>Partner network coverage</p>
+              <p>Argentina, Chile, Colombia</p>
+              <p><strong>Coverage:</strong> Major industrial centers</p>
+              <p><strong>Warehouse Space:</strong> 100,000+ sq ft</p>
+            </div>
+            <button class="btn-outline" onclick="showRegionDetails('Latin America')">View Details</button>
+          </div>
+
+          <div class="coverage-item">
+            <div class="coverage-icon">
+              <i class="fas fa-globe-africa"></i>
+            </div>
+            <h4>Middle East & Africa</h4>
+            <div class="coverage-details">
+              <p><strong>1 Regional Office</strong></p>
+              <p>UAE: Strategic location</p>
+              <p>Partner network coverage</p>
+              <p>Saudi Arabia, South Africa</p>
+              <p><strong>Coverage:</strong> Key industrial markets</p>
+              <p><strong>Warehouse Space:</strong> 75,000+ sq ft</p>
+            </div>
+            <button class="btn-outline" onclick="showRegionDetails('Middle East & Africa')">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shipping & Logistics -->
+    <section class="industrial-banner">
+      <div class="banner-content">
+        <div class="banner-item">
+          <i class="fas fa-rocket"></i>
+          <h3>Same-Day Shipping</h3>
+          <p>Orders placed before 2 PM ship the same day from local distribution centers</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-truck-fast"></i>
+          <h3>Express Delivery</h3>
+          <p>Emergency delivery options available 24/7 for critical applications</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-box"></i>
+          <h3>Secure Packaging</h3>
+          <p>Industrial-grade packaging ensures products arrive safely and undamaged</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-chart-line"></i>
+          <h3>Real-time Tracking</h3>
+          <p>Advanced tracking systems provide complete shipment visibility</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Capabilities -->
+    <section class="section careers-section">
+      <div class="section-header">
+        <h2 class="section-title">Service Capabilities</h2>
+        <p class="section-subtitle">Comprehensive support services across all regions</p>
+      </div>
+      
+      <div class="careers-content">
+        <div class="careers-grid">
+          <div class="career-card">
+            <h3>Technical Support</h3>
+            <p>Expert engineering support available 24/7 across all time zones with local language capabilities and industry-specific expertise.</p>
+            <ul class="service-features">
+              <li>Application engineering</li>
+              <li>System integration support</li>
+              <li>Troubleshooting assistance</li>
+              <li>Product selection guidance</li>
+            </ul>
+          </div>
+
+          <div class="career-card">
+            <h3>Installation Services</h3>
+            <p>On-site installation and commissioning services by certified technicians with extensive industrial experience.</p>
+            <ul class="service-features">
+              <li>System installation</li>
+              <li>Commissioning and testing</li>
+              <li>Training and documentation</li>
+              <li>Warranty support</li>
+            </ul>
+          </div>
+
+          <div class="career-card">
+            <h3>Maintenance Programs</h3>
+            <p>Preventive maintenance and lifecycle support programs to ensure optimal performance and minimize downtime.</p>
+            <ul class="service-features">
+              <li>Preventive maintenance</li>
+              <li>Predictive diagnostics</li>
+              <li>Emergency repair services</li>
+              <li>Parts availability programs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Delta Electric</a></li>
+          <li><a href="#placeholder">Leadership Team</a></li>
+          <li><a href="careers.html">Global Careers</a></li>
+          <li><a href="#placeholder">News & Press</a></li>
+          <li><a href="#placeholder">Investor Relations</a></li>
+          <li><a href="#placeholder">Sustainability</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="products.html?category=electrical">Electrical Components</a></li>
+          <li><a href="products.html?category=automation">Automation & Control</a></li>
+          <li><a href="products.html?category=power">Power Distribution</a></li>
+          <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+          <li><a href="#placeholder">Engineering Services</a></li>
+          <li><a href="#placeholder">Technical Training</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#placeholder">24/7 Technical Support</a></li>
+          <li><a href="#placeholder">Product Documentation</a></li>
+          <li><a href="#placeholder">Warranty Information</a></li>
+          <li><a href="#placeholder">Returns & Exchanges</a></li>
+          <li><a href="#placeholder">Global Shipping Info</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Partners & Legal</h3>
+        <ul>
+          <li><a href="#placeholder">Manufacturing Partners</a></li>
+          <li><a href="#placeholder">Authorized Distributors</a></li>
+          <li><a href="#placeholder">Legal Rights</a></li>
+          <li><a href="#placeholder">Privacy Policy</a></li>
+          <li><a href="#placeholder">Terms of Service</a></li>
+          <li><a href="#placeholder">Compliance & Certifications</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved. Global leader in industrial electrical distribution.</p>
+      <p>
+        <a href="#placeholder">Partners</a> | 
+        <a href="#placeholder">Legal Rights</a> | 
+        <a href="#placeholder">Privacy Policy</a> | 
+        <a href="#placeholder">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      
+      <div class="login-type-selection">
+        <button class="login-type-btn active" onclick="switchLoginType('customer')">Customer Login</button>
+        <button class="login-type-btn" onclick="switchLoginType('admin')">Administrator</button>
+      </div>
+
+      <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="password" id="customerPassword" placeholder="Password" required>
+        <button type="submit">Login to Account</button>
+        <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Create Account</a></p>
+      </form>
+
+      <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+        <input type="text" id="adminUsername" placeholder="Administrator Username" required>
+        <input type="password" id="adminPassword" placeholder="Administrator Password" required>
+        <button type="submit">Access Admin Panel</button>
+      </form>
+
+      <form id="registerForm" class="hidden" onsubmit="handleRegistration(event)">
+        <input type="text" id="regFirstName" placeholder="First Name" required>
+        <input type="text" id="regLastName" placeholder="Last Name" required>
+        <input type="email" id="regEmail" placeholder="Email Address" required>
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCompany" placeholder="Company Name">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+        <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+      </form>
+
+      <div class="error-message" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Admin Controls (Only visible to admins) -->
+  <div class="admin-controls hidden" id="adminControls">
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('products')">Product Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('accounts')">Account Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('orders')">Order Management</button>
+    </div>
+
+    <div class="admin-tab-content active" id="productsTab">
+      <h3>Product Management System</h3>
+      <div class="admin-form">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productBrand" placeholder="Brand/Manufacturer">
+        <input type="number" id="productPrice" placeholder="Price (USD)">
+        <select id="productCategory">
+          <option value="">Select Category</option>
+          <option value="electrical">Electrical Components</option>
+          <option value="automation">Automation & Control</option>
+          <option value="power">Power Distribution</option>
+          <option value="industrial">Industrial Equipment</option>
+          <option value="safety">Safety & Protection</option>
+        </select>
+        <input type="text" id="productDescription" placeholder="Product Description">
+        <button onclick="addProduct()">Add Product</button>
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="accountsTab">
+      <h3>Customer Account Management</h3>
+      <div class="accounts-list" id="accountsList">
+        <!-- Customer accounts will be loaded here -->
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="ordersTab">
+      <h3>Order Management System</h3>
+      <p>Order management features coming soon...</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function showRegionDetails(regionName) {
+      alert(`${regionName} Regional Details:\n\n[PLACEHOLDER: Client can add specific regional information here]\n\n• Detailed facility locations\n• Local contact information\n• Specific service capabilities\n• Regional partnerships\n• Local regulations and certifications\n\nFor specific regional information, please contact our local office.`);
+    }
+  </script>
+</body>
+</html>
