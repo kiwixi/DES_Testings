@@ -69,249 +69,177 @@
 
   <nav class="nav">
     <div class="nav-content">
-      <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li class="dropdown-parent">
-          <a href="#products" id="products-link">Products</a>
-          <ul class="dropdown" id="products-dropdown">
-            <li><a href="#electrical">Electrical</a></li>
-            <li><a href="#electronics">Electronics</a></li>
-            <li><a href="#automation">Automation</a></li>
-            <li><a href="#industrial">Industrial</a></li>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li>
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html?category=electrical">Electrical Components</a></li>
+            <li><a href="products.html?category=automation">Automation & Control</a></li>
+            <li><a href="products.html?category=power">Power Distribution</a></li>
+            <li><a href="products.html?category=safety">Safety & Protection</a></li>
           </ul>
         </li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#careers">Careers</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#map">Coverage Map</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="carrers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="coverage-map.html">Coverage Map</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Main Content -->
+  <main>
+  
   <!-- Hero Section -->
-  <section class="hero" id="home">
+  <section class="hero hero-light">
     <div class="hero-content">
-      <h1>Powering the Future</h1>
-      <p>Distributing top-tier electric and electronic equipment globally with unmatched service and reliability.</p>
-      <a href="#products" class="cta-btn">Browse Products</a>
-    </div>
-  </section>
+      <div class="hero-text">
+        <div class="subtitle">Since 1993[Can be open for edit/removal]</div>
+        <h1><span class="highlight">Global Leader</span> in Industrial Electrical
+        Distribution</h1>
+        <p>Powering industries worldwide with comprehensive electrical solutions,
+        automation technologies, and unmatched technical expertise.
+        From small components to complete industrial systems.</p>
+        
+        <div class="hero-actions">
+          <a href="products.html" class="cta-btn-primary">Explore Products</a>
+          <a href="contact.html" class="cta-btn-primary">Request Quotes</a>
+        </div>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="features-content">
-      <h2>Why Choose Delta Electric Systems?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">ðŸ“¦</div>
-          <h3>Extensive Inventory</h3>
-          <p>Over 10,000 products from leading manufacturers, ensuring you find exactly what you need.</p>
+        <div class="global-presence">
+          <i class="fas fa-globe-americas"></i>
+          <div class="global-presence-text">
+            Serving <strong>50+ Countries</strong> with <strong>24/7</strong> technical support
+            and same-day shipping
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">ðŸ”§</div>
-          <h3>Expert Technical Support</h3>
-          <p>Our certified engineers provide comprehensive technical assistance and product recommendations.</p>
+      </div>
+
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Products In Stock</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">ðŸšš</div>
-          <h3>Fast Delivery</h3>
-          <p>Same-day shipping available with nationwide distribution centers for rapid fulfillment.</p>
+        <div class="stat-item">
+           <span class="stat-number">15</span>
+          <span class="stat-label">Distribution Centers</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">ðŸŒ</div>
-          <h3>Global Reach</h3>
-          <p>Serving customers worldwide with localized support and international shipping capabilities.</p>
-        </div>
+         <div class="stat-item">
+          <span class="stat-number">500M+</span>
+          <span class="stat-label">Annual Revenue</span>
+         </div>
       </div>
     </div>
   </section>
 
-  <!-- Products Section with Filters -->
-  <section class="products-section" id="products">
-    <div class="products-content">
-      <h2>Featured Products</h2>
-      
-      <!-- Product Filters -->
-      <div class="filters" id="filtersSection">
-        <div class="filter-group">
-          <label for="categoryFilter">Category:</label>
-          <select id="categoryFilter">
-            <option value="all">All Categories</option>
-            <option value="electrical">Electrical</option>
-            <option value="electronics">Electronics</option>
-            <option value="automation">Automation</option>
-            <option value="industrial">Industrial</option>
-          </select>
-        </div>
-        
-        <div class="filter-group">
-          <label for="brandFilter">Brand:</label>
-          <select id="brandFilter">
-            <option value="all">All Brands</option>
-            <option value="siemens">Siemens</option>
-            <option value="schneider">Schneider Electric</option>
-            <option value="abb">ABB</option>
-            <option value="ge">General Electric</option>
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label for="priceFilter">Price Range:</label>
-          <select id="priceFilter">
-            <option value="all">All Prices</option>
-            <option value="under100">Under $100</option>
-            <option value="100-500">$100 - $500</option>
-            <option value="500-1000">$500 - $1,000</option>
-            <option value="over1000">Over $1,000</option>
-          </select>
-        </div>
+  <!-- Industrial Banner -->
+  <section class="industrial-banner industrial-banner-light">
+    <div class="banner-content">
+      <div class="banner-item">
+        <i class="fas fa-industry"></i>
+        <h3>Industrial Automation</h3>
+        <p>Complete automation solutions for manufacturing and process industries</p>
       </div>
       
-      <div class="products-grid">
-        <div class="product-category" data-category="electrical">
-          <h3>Electrical Components</h3>
-          <p>Switches, outlets, breakers, panels, and complete electrical systems for residential and commercial applications.</p>
-          <a href="#electrical" class="category-btn">Shop Electrical</a>
-        </div>
-        
-        <div class="product-category" data-category="electronics">
-          <h3>Electronic Controls</h3>
-          <p>PLCs, HMIs, sensors, relays, and advanced control systems for industrial automation and monitoring.</p>
-          <a href="#electronics" class="category-btn">Shop Electronics</a>
-        </div>
-        
-        <div class="product-category" data-category="automation">
-          <h3>Automation Solutions</h3>
-          <p>Servos, drives, motors, robotics, and complete automation packages for manufacturing efficiency.</p>
-          <a href="#automation" class="category-btn">Shop Automation</a>
-        </div>
-        
-        <div class="product-category" data-category="industrial">
-          <h3>Industrial Equipment</h3>
-          <p>Transformers, generators, power distribution equipment, and heavy-duty industrial machinery.</p>
-          <a href="#industrial" class="category-btn">Shop Industrial</a>
-        </div>
+      <div class="banner-item">
+        <i class="fas fa-industry"></i>
+        <h3>Power Distribution</h3>
+        <p>Reliable power infrastructure for critical industrial operations</p>
       </div>
-    </div>
+      
+      <div class="banner-item">
+        <i class="fas fa-industry"></i>
+        <h3>Process Control</h3>
+        <p>Advanced control systems for optimized industrial processes</p>
+      </div>
+      
+      <div class="banner-item">
+        <i class="fas fa-industry"></i>
+       <h3>Safety Systems</h3>
+          <p>Comprehensive safety solutions protecting people and equipment</p>
+      </div>
   </section>
-
-  <!-- About Us Preview -->
-  <section class="about-preview" id="about">
-    <div class="about-content">
-      <h2>About Delta Electric Systems</h2>
-      <div class="about-grid">
+                            
+    
+                                  <!-- About Preview -->
+    <section class="section about-section">
+      <div class="section-header">
+        <h2 class="section-title">Powering Global Industry Since 1993</h2>
+        <p class="section-subtitle">Three decades of excellence in electrical distribution and industrial automation</p>
+      </div>
+      
+      <div class="about-content">
         <div class="about-text">
-          <p>With over 30 years of experience in electrical distribution, Delta Electric Systems has built a reputation for excellence in serving industrial, commercial, and residential markets worldwide.</p>
-          <p>Our commitment to quality, innovation, and customer service has made us a trusted partner for electrical contractors, engineers, and facility managers across diverse industries.</p>
-          <a href="#about-full" class="learn-more-btn">Learn More About Us</a>
-        </div>
-        <div class="about-stats">
-          <div class="stat-item">
-            <h3>30+</h3>
-            <p>Years of Experience</p>
-          </div>
-          <div class="stat-item">
-            <h3>10,000+</h3>
-            <p>Products Available</p>
-          </div>
-          <div class="stat-item">
-            <h3>50+</h3>
-            <p>Countries Served</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Map Section -->
-  <section class="map-section" id="map">
-    <div class="map-content">
-      <h2>Global Supply Chain Coverage</h2>
-      <p>Our extensive network of distribution centers and partnerships ensures reliable delivery worldwide.</p>
-      
-      <div class="map-placeholder">
-        <div class="map-info">
-          <h3>Coverage Areas</h3>
-          <ul>
-            <li>North America - 15 Distribution Centers</li>
-            <li>Europe - 8 Regional Offices</li>
-            <li>Asia Pacific - 12 Partner Locations</li>
-            <li>Latin America - 6 Service Centers</li>
-            <li>Middle East & Africa - 4 Regional Hubs</li>
+          <h3>Global Industrial Expertise</h3>
+                            <!-- Placeholder: Company can customize this content -->
+          <p>[PLACEHOLDER: Company overview paragraph - Replace with custom company description highlighting your unique value proposition and market position]</p>
+          
+          <p>We serve the world's largest manufacturers, utilities, and infrastructure projects with mission-critical electrical components, automation systems, and technical expertise that keeps industry running 24/7.</p>
+          
+          <ul class="about-features">
+            <li>ISO 9001:2015 certified quality management</li>
+            <li>24/7 technical support in 12 languages</li>
+            <li>Same-day shipping from 15 distribution centers</li>
+            <li>Custom engineering and system integration</li>
+            <li>Comprehensive testing and commissioning services</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Careers Preview -->
-  <section class="careers-preview" id="careers">
-    <div class="careers-content">
-      <h2>Join Our Team</h2>
-      <p>Discover exciting career opportunities in the electrical distribution industry.</p>
-      <div class="careers-grid">
-        <div class="career-card">
-          <h3>Sales Engineers</h3>
-          <p>Drive growth and build relationships with key customers.</p>
-        </div>
-        <div class="career-card">
-          <h3>Technical Specialists</h3>
-          <p>Provide expert product knowledge and application support.</p>
-        </div>
-        <div class="career-card">
-          <h3>Operations Team</h3>
-          <p>Ensure efficient logistics and inventory management.</p>
-        </div>
-      </div>
-      <a href="#careers-full" class="careers-btn">View All Positions</a>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
-    <div class="contact-content">
-      <h2>Get In Touch With Us</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <div class="contact-item">
-            <strong>Sales:</strong> +1 (555) 123-4567
-          </div>
-          <div class="contact-item">
-            <strong>Technical Support:</strong> +1 (555) 123-4568
-          </div>
-          <div class="contact-item">
-            <strong>Email:</strong> info@tichnia.com
-          </div>
-          <div class="contact-item">
-            <strong>Hours:</strong> Monday - Friday 7:00 AM - 5:00 PM EST
-          </div>
-          <div class="contact-item">
-            <strong>Address:</strong> 123 Industrial Blvd, Tech City, TC 12345
-          </div>
+          
+          <a href="about.html" class="cta-btn-primary mt-3">Learn More About Our Capabilities</a>
         </div>
         
-        <div class="contact-form">
-          <h3>Send Us a Message</h3>
-          <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Company">
-            <input type="tel" placeholder="Phone Number">
-            <select required>
-              <option value="">Select Inquiry Type</option>
-              <option value="sales">Sales Inquiry</option>
-              <option value="support">Technical Support</option>
-              <option value="careers">Career Opportunities</option>
-              <option value="general">General Question</option>
-            </select>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
+        <div class="about-metrics">
+          <div class="metric-item">
+            <span class="metric-number">50+</span>
+            <span class="metric-label">Countries Served</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">10M+</span>
+            <span class="metric-label">Parts Shipped Annually</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">500+</span>
+            <span class="metric-label">Expert Engineers</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">99.8%</span>
+            <span class="metric-label">On-Time Delivery</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+                    
+                    <!-- Quick Actions for Customers-->
+    <section class="quick-actions customer-only hidden">
+      <div class="section-header">
+        <h2 class="section-title">Customer Portal</h2>
+        <p class="section-subtitle">Manage your account and track orders</p>
+      </div>
+      <div class="quick-actions-content">
+        <div class="quick-action-card">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>Track Orders</h3>
+          <p>Monitor your order status and shipment tracking</p>
+          <button class="btn-outline">View Orders</button>
+        </div>
+        <div class="quick-action-card">
+          <i class="fas fa-file-invoice"></i>
+          <h3>Invoices</h3>
+          <p>Download and manage your billing information</p>
+          <button class="btn-outline">View Invoices</button>
+        </div>
+        <div class="quick-action-card">
+          <i class="fas fa-heart"></i>
+          <h3>Favorites</h3>
+          <p>Access your saved products and wish lists</p>
+          <button class="btn-outline">View Favorites</button>
+        </div>
+      </div>
+    </section>
+    
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -366,6 +294,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
