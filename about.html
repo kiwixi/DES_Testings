@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Delta Electric Systems</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="global-info">
+          <span><i class="fas fa-globe-americas"></i> Global Operations: 50+ Countries</span>
+          <span><i class="fas fa-shipping-fast"></i> Same-Day Shipping Available</span>
+        </div>
+        <div class="support-info">
+          <span><i class="fas fa-phone"></i> 24/7 Support: +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@tichnia.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder">
+            <img src="images/logo.png" alt="Delta Electric Systems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback">Δ</div>
+          </div>
+          <div class="logo-text">
+            <a href="index.html" class="logo-main">Delta Electric Systems</a>
+            <div class="logo-sub">Global Industrial Distribution</div>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search 50,000+ products, parts, manufacturers..." id="searchInput">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <button class="login-btn" onclick="showLoginModal()">Login</button>
+          <button class="admin-btn hidden" id="adminBtn" onclick="toggleAdmin()">Admin Panel</button>
+          <button class="customer-btn hidden" id="customerBtn" onclick="showCustomerDashboard()">My Account</button>
+          <button class="logout-btn hidden" id="logoutBtn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html?category=electrical">Electrical Components</a></li>
+            <li><a href="products.html?category=automation">Automation & Control</a></li>
+            <li><a href="products.html?category=power">Power Distribution</a></li>
+            <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+            <li><a href="products.html?category=safety">Safety & Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="coverage-map.html">Global Coverage</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="subtitle">Since 1993</div>
+          <h1>Global Industrial <span class="highlight">Leadership</span></h1>
+          <p>Powering the world's critical infrastructure with proven expertise, innovative solutions, and unmatched customer service across 50+ countries.</p>
+          
+          <div class="hero-actions">
+            <a href="contact.html" class="cta-btn-primary">Partner With Us</a>
+            <a href="careers.html" class="cta-btn-secondary">Join Our Team</a>
+          </div>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">32</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Expert Engineers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">15</span>
+            <span class="stat-label">Global Facilities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="section about-section">
+      <div class="section-header">
+        <h2 class="section-title">Our Story</h2>
+        <p class="section-subtitle">From regional distributor to global industrial leader</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Founded on Excellence</h3>
+          <!-- [PLACEHOLDER: Company can customize this founding story] -->
+          <p>[PLACEHOLDER: Replace with your company's actual founding story, key milestones, and unique journey. Include specific details about founders, early challenges overcome, and growth achievements.]</p>
+          
+          <p>Delta Electric Systems was established in 1993 with a simple mission: to provide industrial customers with the highest quality electrical components, expert technical support, and reliable service that exceeds expectations.</p>
+          
+          <h3>Global Expansion</h3>
+          <p>What began as a regional electrical distributor has evolved into a global leader serving major manufacturers, utilities, and infrastructure projects worldwide. Our strategic expansion across six continents ensures local expertise with global capabilities.</p>
+          
+          <ul class="about-features">
+            <li>ISO 9001:2015 certified quality management systems</li>
+            <li>500+ certified engineers and technical specialists</li>
+            <li>15 distribution centers across 6 continents</li>
+            <li>24/7 multilingual technical support</li>
+            <li>Custom engineering and system integration services</li>
+            <li>Comprehensive testing and commissioning capabilities</li>
+            <li>Emergency response and critical parts availability</li>
+            <li>Sustainable business practices and environmental responsibility</li>
+          </ul>
+        </div>
+        
+        <div class="about-metrics">
+          <div class="metric-item">
+            <span class="metric-number">1993</span>
+            <span class="metric-label">Founded</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">50+</span>
+            <span class="metric-label">Countries Served</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">10M+</span>
+            <span class="metric-label">Parts Delivered</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">99.8%</span>
+            <span class="metric-label">Customer Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="industrial-banner">
+      <div class="banner-content">
+        <div class="banner-item">
+          <i class="fas fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <p>[PLACEHOLDER: Insert company mission statement - Client can customize this core message]</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-eye"></i>
+          <h3>Our Vision</h3>
+          <p>[PLACEHOLDER: Insert company vision statement - Client can customize this future-focused message]</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-heart"></i>
+          <h3>Our Values</h3>
+          <p>Excellence, integrity, innovation, and customer success drive everything we do</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-handshake"></i>
+          <h3>Our Promise</h3>
+          <p>Reliable partnerships, expert support, and solutions that exceed expectations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section careers-section">
+      <div class="section-header">
+        <h2 class="section-title">Leadership Team</h2>
+        <p class="section-subtitle">[PLACEHOLDER: Client can add leadership team information and photos]</p>
+      </div>
+      
+      <div class="careers-content">
+        <div class="careers-grid">
+          <div class="career-card">
+            <h3>[PLACEHOLDER: CEO Name]</h3>
+            <p><strong>Chief Executive Officer</strong></p>
+            <p>[PLACEHOLDER: CEO biography and experience. Client can add actual leadership team details, photos, and backgrounds.]</p>
+          </div>
+
+          <div class="career-card">
+            <h3>[PLACEHOLDER: CTO Name]</h3>
+            <p><strong>Chief Technology Officer</strong></p>
+            <p>[PLACEHOLDER: CTO biography and technical leadership experience.]</p>
+          </div>
+
+          <div class="career-card">
+            <h3>[PLACEHOLDER: Global Sales Director]</h3>
+            <p><strong>Global Sales Director</strong></p>
+            <p>[PLACEHOLDER: Sales leadership biography and international experience.]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Awards -->
+    <section class="section about-section">
+      <div class="section-header">
+        <h2 class="section-title">Certifications & Recognition</h2>
+        <p class="section-subtitle">Industry-leading standards and recognized excellence</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Quality Certifications</h3>
+          <p>Our commitment to quality is validated through rigorous international certifications and continuous improvement processes.</p>
+          
+          <ul class="about-features">
+            <li>ISO 9001:2015 Quality Management System</li>
+            <li>ISO 14001:2015 Environmental Management</li>
+            <li>OHSAS 18001 Occupational Health & Safety</li>
+            <li>UL Listed and CSA Certified Products</li>
+            <li>IEC 61508 Functional Safety Compliance</li>
+            <li>[PLACEHOLDER: Add specific industry certifications]</li>
+            <li>[PLACEHOLDER: Add regional compliance certifications]</li>
+            <li>[PLACEHOLDER: Add customer-specific certifications]</li>
+          </ul>
+          
+          <h3>Industry Recognition</h3>
+          <p>[PLACEHOLDER: Client can add specific awards, industry recognition, and achievements earned by the company.]</p>
+        </div>
+        
+        <div class="about-metrics">
+          <div class="metric-item">
+            <span class="metric-number">8+</span>
+            <span class="metric-label">ISO Certifications</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">50+</span>
+            <span class="metric-label">Industry Awards</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Compliance Rate</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">24/7</span>
+            <span class="metric-label">Quality Monitoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Delta Electric</a></li>
+          <li><a href="#placeholder">Leadership Team</a></li>
+          <li><a href="careers.html">Global Careers</a></li>
+          <li><a href="#placeholder">News & Press</a></li>
+          <li><a href="#placeholder">Investor Relations</a></li>
+          <li><a href="#placeholder">Sustainability</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="products.html?category=electrical">Electrical Components</a></li>
+          <li><a href="products.html?category=automation">Automation & Control</a></li>
+          <li><a href="products.html?category=power">Power Distribution</a></li>
+          <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+          <li><a href="#placeholder">Engineering Services</a></li>
+          <li><a href="#placeholder">Technical Training</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#placeholder">24/7 Technical Support</a></li>
+          <li><a href="#placeholder">Product Documentation</a></li>
+          <li><a href="#placeholder">Warranty Information</a></li>
+          <li><a href="#placeholder">Returns & Exchanges</a></li>
+          <li><a href="#placeholder">Global Shipping Info</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Partners & Legal</h3>
+        <ul>
+          <li><a href="#placeholder">Manufacturing Partners</a></li>
+          <li><a href="#placeholder">Authorized Distributors</a></li>
+          <li><a href="#placeholder">Legal Rights</a></li>
+          <li><a href="#placeholder">Privacy Policy</a></li>
+          <li><a href="#placeholder">Terms of Service</a></li>
+          <li><a href="#placeholder">Compliance & Certifications</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved. Global leader in industrial electrical distribution.</p>
+      <p>
+        <a href="#placeholder">Partners</a> | 
+        <a href="#placeholder">Legal Rights</a> | 
+        <a href="#placeholder">Privacy Policy</a> | 
+        <a href="#placeholder">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      
+      <div class="login-type-selection">
+        <button class="login-type-btn active" onclick="switchLoginType('customer')">Customer Login</button>
+        <button class="login-type-btn" onclick="switchLoginType('admin')">Administrator</button>
+      </div>
+
+      <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="password" id="customerPassword" placeholder="Password" required>
+        <button type="submit">Login to Account</button>
+        <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Create Account</a></p>
+      </form>
+
+      <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+        <input type="text" id="adminUsername" placeholder="Administrator Username" required>
+        <input type="password" id="adminPassword" placeholder="Administrator Password" required>
+        <button type="submit">Access Admin Panel</button>
+      </form>
+
+      <form id="registerForm" class="hidden" onsubmit="handleRegistration(event)">
+        <input type="text" id="regFirstName" placeholder="First Name" required>
+        <input type="text" id="regLastName" placeholder="Last Name" required>
+        <input type="email" id="regEmail" placeholder="Email Address" required>
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCompany" placeholder="Company Name">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+        <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+      </form>
+
+      <div class="error-message" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Admin Controls (Only visible to admins) -->
+  <div class="admin-controls hidden" id="adminControls">
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('products')">Product Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('accounts')">Account Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('orders')">Order Management</button>
+    </div>
+
+    <div class="admin-tab-content active" id="productsTab">
+      <h3>Product Management System</h3>
+      <div class="admin-form">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productBrand" placeholder="Brand/Manufacturer">
+        <input type="number" id="productPrice" placeholder="Price (USD)">
+        <select id="productCategory">
+          <option value="">Select Category</option>
+          <option value="electrical">Electrical Components</option>
+          <option value="automation">Automation & Control</option>
+          <option value="power">Power Distribution</option>
+          <option value="industrial">Industrial Equipment</option>
+          <option value="safety">Safety & Protection</option>
+        </select>
+        <input type="text" id="productDescription" placeholder="Product Description">
+        <button onclick="addProduct()">Add Product</button>
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="accountsTab">
+      <h3>Customer Account Management</h3>
+      <div class="accounts-list" id="accountsList">
+        <!-- Customer accounts will be loaded here -->
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="ordersTab">
+      <h3>Order Management System</h3>
+      <p>Order management features coming soon...</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

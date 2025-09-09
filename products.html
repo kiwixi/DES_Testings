@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Products - Delta Electric Systems</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+  <!-- Header (Same as index.html) -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="global-info">
+          <span><i class="fas fa-globe-americas"></i> Global Operations: 50+ Countries</span>
+          <span><i class="fas fa-shipping-fast"></i> Same-Day Shipping Available</span>
+        </div>
+        <div class="support-info">
+          <span><i class="fas fa-phone"></i> 24/7 Support: +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@tichnia.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder">
+            <img src="images/logo.png" alt="Delta Electric Systems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback">Δ</div>
+          </div>
+          <div class="logo-text">
+            <a href="index.html" class="logo-main">Delta Electric Systems</a>
+            <div class="logo-sub">Global Industrial Distribution</div>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search 50,000+ products, parts, manufacturers..." id="searchInput">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <button class="login-btn" onclick="showLoginModal()">Login</button>
+          <button class="admin-btn hidden" id="adminBtn" onclick="toggleAdmin()">Admin Panel</button>
+          <button class="customer-btn hidden" id="customerBtn" onclick="showCustomerDashboard()">My Account</button>
+          <button class="logout-btn hidden" id="logoutBtn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="products.html" class="active">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html?category=electrical">Electrical Components</a></li>
+            <li><a href="products.html?category=automation">Automation & Control</a></li>
+            <li><a href="products.html?category=power">Power Distribution</a></li>
+            <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+            <li><a href="products.html?category=safety">Safety & Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="coverage-map.html">Global Coverage</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Products Hero -->
+    <section class="products-hero">
+      <div class="products-hero-content">
+        <h1>Industrial Product Catalog</h1>
+        <p>Comprehensive electrical and automation solutions from the world's leading manufacturers</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-number">50,000+</span>
+            <span class="stat-label">Products Available</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Top Brands</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Technical Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Controls (Only visible to admins) -->
+    <div class="admin-controls hidden" id="adminControls">
+      <div class="admin-tabs">
+        <button class="admin-tab-btn active" onclick="switchAdminTab('products')">Product Management</button>
+        <button class="admin-tab-btn" onclick="switchAdminTab('accounts')">Account Management</button>
+        <button class="admin-tab-btn" onclick="switchAdminTab('orders')">Order Management</button>
+      </div>
+
+      <div class="admin-tab-content active" id="productsTab">
+        <h3>Product Management System</h3>
+        <div class="admin-form">
+          <input type="text" id="productName" placeholder="Product Name">
+          <input type="text" id="productBrand" placeholder="Brand/Manufacturer">
+          <input type="number" id="productPrice" placeholder="Price (USD)">
+          <select id="productCategory">
+            <option value="">Select Category</option>
+            <option value="electrical">Electrical Components</option>
+            <option value="automation">Automation & Control</option>
+            <option value="power">Power Distribution</option>
+            <option value="industrial">Industrial Equipment</option>
+            <option value="safety">Safety & Protection</option>
+          </select>
+          <input type="text" id="productDescription" placeholder="Product Description">
+          <button onclick="addProduct()">Add Product</button>
+        </div>
+      </div>
+
+      <div class="admin-tab-content" id="accountsTab">
+        <h3>Customer Account Management</h3>
+        <div class="accounts-list" id="accountsList">
+          <!-- Customer accounts will be loaded here -->
+        </div>
+      </div>
+
+      <div class="admin-tab-content" id="ordersTab">
+        <h3>Order Management System</h3>
+        <p>[PLACEHOLDER: Advanced order management features - Client can customize this section with specific order workflow requirements]</p>
+      </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="products-content">
+        <!-- Advanced Filters -->
+        <div class="filters-container">
+          <h3>Filter Products</h3>
+          <div class="filters-grid">
+            <div class="filter-group">
+              <label>Product Category</label>
+              <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="electrical">Electrical Components</option>
+                <option value="automation">Automation & Control</option>
+                <option value="power">Power Distribution</option>
+                <option value="industrial">Industrial Equipment</option>
+                <option value="safety">Safety & Protection</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label>Manufacturer</label>
+              <select id="brandFilter">
+                <option value="all">All Manufacturers</option>
+                <option value="siemens">Siemens</option>
+                <option value="schneider">Schneider Electric</option>
+                <option value="abb">ABB</option>
+                <option value="ge">General Electric</option>
+                <option value="rockwell">Rockwell Automation</option>
+                <option value="eaton">Eaton</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label>Price Range</label>
+              <select id="priceFilter">
+                <option value="all">All Price Ranges</option>
+                <option value="0-100">Under $100</option>
+                <option value="100-500">$100 - $500</option>
+                <option value="500-1000">$500 - $1,000</option>
+                <option value="1000-5000">$1,000 - $5,000</option>
+                <option value="5000-999999">Over $5,000</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label>Availability</label>
+              <select id="stockFilter">
+                <option value="all">All Products</option>
+                <option value="instock">In Stock</option>
+                <option value="featured">Featured Products</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="filter-actions">
+            <button class="btn-outline" onclick="clearFilters()">Clear All Filters</button>
+            <button class="cta-btn-primary" onclick="exportResults()">Export Results</button>
+          </div>
+        </div>
+        
+        <!-- Results Information -->
+        <div id="resultsInfo" class="results-info">
+          <!-- Dynamic results count will be inserted here -->
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be loaded here by JavaScript -->
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container">
+          <button class="cta-btn-primary" onclick="loadMoreProducts()">Load More Products</button>
+          <p>Showing products 1-20 of 50,000+</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories Overview -->
+    <section class="categories-overview">
+      <div class="section-header">
+        <h2 class="section-title">Product Categories</h2>
+        <p class="section-subtitle">Explore our comprehensive range of industrial electrical solutions</p>
+      </div>
+      
+      <div class="categories-grid">
+        <div class="category-card" onclick="filterByCategory('electrical')">
+          <div class="category-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Electrical Components</h3>
+          <p>Circuit breakers, contactors, relays, and control devices for industrial applications</p>
+          <span class="product-count">12,000+ Products</span>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('automation')">
+          <div class="category-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Automation & Control</h3>
+          <p>PLCs, HMIs, drives, and sensors for modern industrial automation systems</p>
+          <span class="product-count">15,000+ Products</span>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('power')">
+          <div class="category-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Power Distribution</h3>
+          <p>Transformers, switchgear, and distribution equipment for electrical infrastructure</p>
+          <span class="product-count">8,000+ Products</span>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('industrial')">
+          <div class="category-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3>Industrial Equipment</h3>
+          <p>Motors, drives, pumps, and mechanical components for manufacturing</p>
+          <span class="product-count">10,000+ Products</span>
+        </div>
+
+        <div class="category-card" onclick="filterByCategory('safety')">
+          <div class="category-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safety & Protection</h3>
+          <p>Safety devices, emergency stops, and protective equipment for workplace safety</p>
+          <span class="product-count">5,000+ Products</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Delta Electric</a></li>
+          <li><a href="#placeholder">Leadership Team</a></li>
+          <li><a href="careers.html">Global Careers</a></li>
+          <li><a href="#placeholder">News & Press</a></li>
+          <li><a href="#placeholder">Investor Relations</a></li>
+          <li><a href="#placeholder">Sustainability</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="products.html?category=electrical">Electrical Components</a></li>
+          <li><a href="products.html?category=automation">Automation & Control</a></li>
+          <li><a href="products.html?category=power">Power Distribution</a></li>
+          <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+          <li><a href="#placeholder">Engineering Services</a></li>
+          <li><a href="#placeholder">Technical Training</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#placeholder">24/7 Technical Support</a></li>
+          <li><a href="#placeholder">Product Documentation</a></li>
+          <li><a href="#placeholder">Warranty Information</a></li>
+          <li><a href="#placeholder">Returns & Exchanges</a></li>
+          <li><a href="#placeholder">Global Shipping Info</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Partners & Legal</h3>
+        <ul>
+          <li><a href="#placeholder">Manufacturing Partners</a></li>
+          <li><a href="#placeholder">Authorized Distributors</a></li>
+          <li><a href="#placeholder">Legal Rights</a></li>
+          <li><a href="#placeholder">Privacy Policy</a></li>
+          <li><a href="#placeholder">Terms of Service</a></li>
+          <li><a href="#placeholder">Compliance & Certifications</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved. Global leader in industrial electrical distribution.</p>
+      <p>
+        <a href="#placeholder">Partners</a> | 
+        <a href="#placeholder">Legal Rights</a> | 
+        <a href="#placeholder">Privacy Policy</a> | 
+        <a href="#placeholder">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Login Modal (Same as index.html) -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      
+      <div class="login-type-selection">
+        <button class="login-type-btn active" onclick="switchLoginType('customer')">Customer Login</button>
+        <button class="login-type-btn" onclick="switchLoginType('admin')">Administrator</button>
+      </div>
+
+      <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="password" id="customerPassword" placeholder="Password" required>
+        <button type="submit">Login to Account</button>
+        <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Create Account</a></p>
+      </form>
+
+      <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+        <input type="text" id="adminUsername" placeholder="Administrator Username" required>
+        <input type="password" id="adminPassword" placeholder="Administrator Password" required>
+        <button type="submit">Access Admin Panel</button>
+      </form>
+
+      <form id="registerForm" class="hidden" onsubmit="handleRegistration(event)">
+        <input type="text" id="regFirstName" placeholder="First Name" required>
+        <input type="text" id="regLastName" placeholder="Last Name" required>
+        <input type="email" id="regEmail" placeholder="Email Address" required>
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCompany" placeholder="Company Name">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+        <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+      </form>
+
+      <div class="error-message" id="loginError"></div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
