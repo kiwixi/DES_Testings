@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Delta Electric Systems</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-content">
+        <div class="global-info">
+          <span><i class="fas fa-globe-americas"></i> Global Operations: 50+ Countries</span>
+          <span><i class="fas fa-shipping-fast"></i> Same-Day Shipping Available</span>
+        </div>
+        <div class="support-info">
+          <span><i class="fas fa-phone"></i> 24/7 Support: +1 (555) 123-4567</span>
+          <span><i class="fas fa-envelope"></i> info@tichnia.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder">
+            <img src="images/logo.png" alt="Delta Electric Systems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback">Δ</div>
+          </div>
+          <div class="logo-text">
+            <a href="index.html" class="logo-main">Delta Electric Systems</a>
+            <div class="logo-sub">Global Industrial Distribution</div>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search 50,000+ products, parts, manufacturers..." id="searchInput">
+          <button class="search-btn" onclick="performSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <button class="login-btn" onclick="showLoginModal()">Login</button>
+          <button class="admin-btn hidden" id="adminBtn" onclick="toggleAdmin()">Admin Panel</button>
+          <button class="customer-btn hidden" id="customerBtn" onclick="showCustomerDashboard()">My Account</button>
+          <button class="logout-btn hidden" id="logoutBtn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html?category=electrical">Electrical Components</a></li>
+            <li><a href="products.html?category=automation">Automation & Control</a></li>
+            <li><a href="products.html?category=power">Power Distribution</a></li>
+            <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+            <li><a href="products.html?category=safety">Safety & Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="coverage-map.html">Global Coverage</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <h1>Global Contact Network</h1>
+        <p>Connect with our worldwide team of electrical distribution experts</p>
+        <div class="contact-stats">
+          <div class="contact-stat">
+            <i class="fas fa-globe"></i>
+            <span>50+ Countries</span>
+          </div>
+          <div class="contact-stat">
+            <i class="fas fa-clock"></i>
+            <span>24/7 Support</span>
+          </div>
+          <div class="contact-stat">
+            <i class="fas fa-phone"></i>
+            <span>12 Languages</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Worldwide Support</h2>
+          <p>Our global network of technical experts and customer support specialists are ready to assist with your industrial electrical requirements 24 hours a day, 7 days a week.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-method-text">
+                <h4>Global Sales Hotline</h4>
+                <p>+1 (555) 123-4567</p>
+                <small>Available 24/7 for urgent inquiries</small>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <div class="contact-method-text">
+                <h4>Technical Support</h4>
+                <p>+1 (555) 123-4568</p>
+                <small>Expert engineering assistance</small>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-method-text">
+                <h4>Email Support</h4>
+                <p>info@tichnia.com</p>
+                <small>Response within 24 hours</small>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="contact-method-text">
+                <h4>Global Headquarters</h4>
+                <p>123 Industrial Blvd</p>
+                <p>Tech City, TC 12345</p>
+                <small>[PLACEHOLDER: Replace with actual address]</small>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-method-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-method-text">
+                <h4>Business Hours</h4>
+                <p>Mon-Fri: 7:00 AM - 6:00 PM EST</p>
+                <p>Emergency Support: 24/7</p>
+                <small>Global time zone coverage</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form onsubmit="submitContactForm(event)">
+            <div class="form-row">
+              <input type="text" placeholder="First Name *" required>
+              <input type="text" placeholder="Last Name *" required>
+            </div>
+            <div class="form-row">
+              <input type="email" placeholder="Email Address *" required>
+              <input type="tel" placeholder="Phone Number">
+            </div>
+            <input type="text" placeholder="Company/Organization">
+            <select required>
+              <option value="">Select Inquiry Type *</option>
+              <option value="quote">Product Quote Request</option>
+              <option value="technical">Technical Support</option>
+              <option value="product">Product Information</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="careers">Career Opportunities</option>
+              <option value="billing">Billing & Account</option>
+              <option value="shipping">Shipping & Delivery</option>
+              <option value="general">General Inquiry</option>
+            </select>
+            <textarea rows="6" placeholder="Describe your requirements or questions in detail..." required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regional Offices -->
+    <section class="section regional-offices">
+      <div class="section-header">
+        <h2 class="section-title">Regional Offices</h2>
+        <p class="section-subtitle">Local expertise with global support capabilities</p>
+      </div>
+      
+      <div class="regional-content">
+        <div class="regions-grid">
+          <div class="region-card">
+            <div class="region-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>North America</h3>
+            </div>
+            <div class="region-info">
+              <p><strong>Headquarters:</strong> Tech City, TC 12345</p>
+              <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+              <p><strong>Email:</strong> americas@tichnia.com</p>
+              <p><strong>Coverage:</strong> USA, Canada, Mexico</p>
+              <p><strong>Distribution Centers:</strong> 6 Locations</p>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <div class="region-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Europe</h3>
+            </div>
+            <div class="region-info">
+              <p><strong>Regional Hub:</strong> [PLACEHOLDER: City, Country]</p>
+              <p><strong>Phone:</strong> +44 (0) 20 1234 5678</p>
+              <p><strong>Email:</strong> europe@tichnia.com</p>
+              <p><strong>Coverage:</strong> EU, UK, Nordic Countries</p>
+              <p><strong>Distribution Centers:</strong> 4 Locations</p>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <div class="region-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Asia Pacific</h3>
+            </div>
+            <div class="region-info">
+              <p><strong>Regional Hub:</strong> [PLACEHOLDER: City, Country]</p>
+              <p><strong>Phone:</strong> +65 6123 4567</p>
+              <p><strong>Email:</strong> apac@tichnia.com</p>
+              <p><strong>Coverage:</strong> ASEAN, ANZ, Japan, Korea</p>
+              <p><strong>Distribution Centers:</strong> 3 Locations</p>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <div class="region-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Latin America</h3>
+            </div>
+            <div class="region-info">
+              <p><strong>Regional Hub:</strong> [PLACEHOLDER: City, Country]</p>
+              <p><strong>Phone:</strong> +55 11 1234 5678</p>
+              <p><strong>Email:</strong> latam@tichnia.com</p>
+              <p><strong>Coverage:</strong> Brazil, Argentina, Chile, Colombia</p>
+              <p><strong>Distribution Centers:</strong> 1 Location</p>
+            </div>
+          </div>
+
+          <div class="region-card">
+            <div class="region-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Middle East & Africa</h3>
+            </div>
+            <div class="region-info">
+              <p><strong>Regional Hub:</strong> [PLACEHOLDER: City, Country]</p>
+              <p><strong>Phone:</strong> +971 4 123 4567</p>
+              <p><strong>Email:</strong> mea@tichnia.com</p>
+              <p><strong>Coverage:</strong> UAE, Saudi Arabia, South Africa</p>
+              <p><strong>Distribution Centers:</strong> 1 Location</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Resources -->
+    <section class="industrial-banner">
+      <div class="banner-content">
+        <div class="banner-item">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Technical Support</h3>
+          <p>Round-the-clock engineering support for critical applications</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Emergency Delivery</h3>
+          <p>Same-day and next-day delivery for urgent requirements</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-language"></i>
+          <h3>Multilingual Support</h3>
+          <p>Customer service available in 12 languages worldwide</p>
+        </div>
+        
+        <div class="banner-item">
+          <i class="fas fa-certificate"></i>
+          <h3>Quality Guaranteed</h3>
+          <p>ISO certified processes and comprehensive warranties</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Delta Electric</a></li>
+          <li><a href="#placeholder">Leadership Team</a></li>
+          <li><a href="careers.html">Global Careers</a></li>
+          <li><a href="#placeholder">News & Press</a></li>
+          <li><a href="#placeholder">Investor Relations</a></li>
+          <li><a href="#placeholder">Sustainability</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Products & Services</h3>
+        <ul>
+          <li><a href="products.html?category=electrical">Electrical Components</a></li>
+          <li><a href="products.html?category=automation">Automation & Control</a></li>
+          <li><a href="products.html?category=power">Power Distribution</a></li>
+          <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+          <li><a href="#placeholder">Engineering Services</a></li>
+          <li><a href="#placeholder">Technical Training</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#placeholder">24/7 Technical Support</a></li>
+          <li><a href="#placeholder">Product Documentation</a></li>
+          <li><a href="#placeholder">Warranty Information</a></li>
+          <li><a href="#placeholder">Returns & Exchanges</a></li>
+          <li><a href="#placeholder">Global Shipping Info</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Partners & Legal</h3>
+        <ul>
+          <li><a href="#placeholder">Manufacturing Partners</a></li>
+          <li><a href="#placeholder">Authorized Distributors</a></li>
+          <li><a href="#placeholder">Legal Rights</a></li>
+          <li><a href="#placeholder">Privacy Policy</a></li>
+          <li><a href="#placeholder">Terms of Service</a></li>
+          <li><a href="#placeholder">Compliance & Certifications</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved. Global leader in industrial electrical distribution.</p>
+      <p>
+        <a href="#placeholder">Partners</a> | 
+        <a href="#placeholder">Legal Rights</a> | 
+        <a href="#placeholder">Privacy Policy</a> | 
+        <a href="#placeholder">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      
+      <div class="login-type-selection">
+        <button class="login-type-btn active" onclick="switchLoginType('customer')">Customer Login</button>
+        <button class="login-type-btn" onclick="switchLoginType('admin')">Administrator</button>
+      </div>
+
+      <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="password" id="customerPassword" placeholder="Password" required>
+        <button type="submit">Login to Account</button>
+        <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Create Account</a></p>
+      </form>
+
+      <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+        <input type="text" id="adminUsername" placeholder="Administrator Username" required>
+        <input type="password" id="adminPassword" placeholder="Administrator Password" required>
+        <button type="submit">Access Admin Panel</button>
+      </form>
+
+      <form id="registerForm" class="hidden" onsubmit="handleRegistration(event)">
+        <input type="text" id="regFirstName" placeholder="First Name" required>
+        <input type="text" id="regLastName" placeholder="Last Name" required>
+        <input type="email" id="regEmail" placeholder="Email Address" required>
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCompany" placeholder="Company Name">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+        <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+      </form>
+
+      <div class="error-message" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Admin Controls (Only visible to admins) -->
+  <div class="admin-controls hidden" id="adminControls">
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('products')">Product Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('accounts')">Account Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('orders')">Order Management</button>
+    </div>
+
+    <div class="admin-tab-content active" id="productsTab">
+      <h3>Product Management System</h3>
+      <div class="admin-form">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productBrand" placeholder="Brand/Manufacturer">
+        <input type="number" id="productPrice" placeholder="Price (USD)">
+        <select id="productCategory">
+          <option value="">Select Category</option>
+          <option value="electrical">Electrical Components</option>
+          <option value="automation">Automation & Control</option>
+          <option value="power">Power Distribution</option>
+          <option value="industrial">Industrial Equipment</option>
+          <option value="safety">Safety & Protection</option>
+        </select>
+        <input type="text" id="productDescription" placeholder="Product Description">
+        <button onclick="addProduct()">Add Product</button>
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="accountsTab">
+      <h3>Customer Account Management</h3>
+      <div class="accounts-list" id="accountsList">
+        <!-- Customer accounts will be loaded here -->
+      </div>
+    </div>
+
+    <div class="admin-tab-content" id="ordersTab">
+      <h3>Order Management System</h3>
+      <p>Order management features coming soon...</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function submitContactForm(event) {
+      event.preventDefault();
+      alert('Thank you for contacting Delta Electric Systems!\n\nYour message has been received and our team will respond within 24 hours.\n\nFor urgent technical support, please call our 24/7 hotline at +1 (555) 123-4567.');
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
