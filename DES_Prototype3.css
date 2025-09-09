@@ -346,76 +346,7 @@ main {
   margin-top: 180px;
 }
 
-/* Hero Section - Lighter Version for Homepage */
-.hero-light {
-  background: 
-    linear-gradient(135deg, rgba(238, 238, 238, 0.95) 0%, rgba(204, 204, 204, 0.85) 100%), 
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="lightGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="%23cccccc" stroke-width="0.8" opacity="0.8"/><circle cx="0" cy="0" r="1" fill="%23cccccc" opacity="0.6"/><circle cx="20" cy="20" r="1" fill="%23cccccc" opacity="0.6"/></pattern></defs><rect width="100" height="100" fill="url(%23lightGrid)"/></svg>'),
-    linear-gradient(45deg, #eeeeee 0%, #ffffff 100%);
-  background-size: 80px 80px, cover, cover;
-  color: #000000;
-}
-
-.hero-light::before {
-  background: linear-gradient(135deg, transparent 0%, rgba(4, 150, 199, 0.1) 100%);
-}
-
-.hero-light .hero-text h1 {
-  color: #000000;
-}
-
-.hero-light .hero-text p {
-  color: #555555;
-}
-
-.hero-light .global-presence-text {
-  color: #666666;
-}
-
-.hero-light .global-presence-text strong {
-  color: #000000;
-}
-
-.hero-light .stat-item {
-  background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(204,204,204,0.5);
-}
-
-.hero-light .stat-item:hover {
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.hero-light .stat-label {
-  color: #666666;
-}
-
-/* Industrial Banner - Lighter Version */
-.industrial-banner-light {
-  background: linear-gradient(135deg, #eeeeee, #cccccc);
-  color: #000000;
-}
-
-.industrial-banner-light::before {
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="lightHexPattern" width="60" height="60" patternUnits="userSpaceOnUse"><polygon points="30,5 50,17.5 50,42.5 30,55 10,42.5 10,17.5" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.3"/></pattern></defs><rect width="100%" height="100%" fill="url(%23lightHexPattern)"/></svg>');
-  background-size: 120px 120px;
-}
-
-.industrial-banner-light .banner-item {
-  color: #000000;
-}
-
-.industrial-banner-light .banner-item i {
-  color: #0496C7;
-}
-
-.industrial-banner-light .banner-item h3 {
-  color: #000000;
-}
-
-.industrial-banner-light .banner-item p {
-  color: #555555;
-}
+/* Hero Section */
 .hero {
   background: 
     linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(26,26,26,0.75) 100%), 
