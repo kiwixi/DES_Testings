@@ -241,60 +241,157 @@
     
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
         <h3>Company</h3>
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#news">News & Updates</a></li>
-          <li><a href="#investors">Investor Relations</a></li>
+          <li><a href="about.html">About Delta Electric</a></li>
+          <li><a href="#placeholder">Leadership Team</a></li>
+          <li><a href="careers.html">Global Careers</a></li>
+          <li><a href="#placeholder">News & Press</a></li>
+          <li><a href="#placeholder">Investor Relations</a></li>
+          <li><a href="#placeholder">Sustainability</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h3>Products & Services</h3>
         <ul>
-          <li><a href="#electrical">Electrical</a></li>
-          <li><a href="#electronics">Electronics</a></li>
-          <li><a href="#automation">Automation</a></li>
-          <li><a href="#support">Technical Support</a></li>
+          <li><a href="products.html?category=electrical">Electrical Components</a></li>
+          <li><a href="products.html?category=automation">Automation & Control</a></li>
+          <li><a href="products.html?category=power">Power Distribution</a></li>
+          <li><a href="products.html?category=industrial">Industrial Equipment</a></li>
+          <li><a href="#placeholder">Engineering Services</a></li>
+          <li><a href="#placeholder">Technical Training</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h3>Customer Support</h3>
         <ul>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#support">Help Center</a></li>
-          <li><a href="#shipping">Shipping Info</a></li>
-          <li><a href="#returns">Returns & Exchanges</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#placeholder">24/7 Technical Support</a></li>
+          <li><a href="#placeholder">Product Documentation</a></li>
+          <li><a href="#placeholder">Warranty Information</a></li>
+          <li><a href="#placeholder">Returns & Exchanges</a></li>
+          <li><a href="#placeholder">Global Shipping Info</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h3>Legal</h3>
+        <h3>Partners & Legal</h3>
         <ul>
-          <li><a href="#partners">Partners</a></li>
-          <li><a href="#legal">Legal Rights</a></li>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#placeholder">Manufacturing Partners</a></li>
+          <li><a href="#placeholder">Authorized Distributors</a></li>
+          <li><a href="#placeholder">Legal Rights</a></li>
+          <li><a href="#placeholder">Privacy Policy</a></li>
+          <li><a href="#placeholder">Terms of Service</a></li>
+          <li><a href="#placeholder">Compliance & Certifications</a></li>
         </ul>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2025 Delta Electric Systems. All rights reserved.</p>
-      <p><a href="#partners">Partners</a> | <a href="#legal">Legal Rights</a> | <a href="#privacy">Privacy Policy</a></p>
+      <p>&copy; 2025 Delta Electric Systems. All rights reserved. Global leader in industrial electrical distribution.</p>
+      <p>
+        <a href="#placeholder">Partners</a> | 
+        <a href="#placeholder">Legal Rights</a> | 
+        <a href="#placeholder">Privacy Policy</a> | 
+        <a href="#placeholder">Terms of Service</a>
+      </p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login</h2>
+      
+      <!-- Login Type Selection -->
+      <div class="login-type-selection">
+        <button class="login-type-btn active" onclick="switchLoginType('customer')">Customer Login</button>
+        <button class="login-type-btn" onclick="switchLoginType('admin')">Administrator</button>
+      </div>
+
+      <!-- Customer Login Form -->
+      <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="password" id="customerPassword" placeholder="Password" required>
+        <button type="submit">Login to Account</button>
+        <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Create Account</a></p>
+      </form>
+
+      <!-- Admin Login Form -->
+      <form id="adminLoginForm" class="hidden" onsubmit="handleAdminLogin(event)">
+        <input type="text" id="adminUsername" placeholder="Administrator Username" required>
+        <input type="password" id="adminPassword" placeholder="Administrator Password" required>
+        <button type="submit">Access Admin Panel</button>
+      </form>
+
+      <!-- Registration Form -->
+      <form id="registerForm" class="hidden" onsubmit="handleRegistration(event)">
+        <input type="text" id="regFirstName" placeholder="First Name" required>
+        <input type="text" id="regLastName" placeholder="Last Name" required>
+        <input type="email" id="regEmail" placeholder="Email Address" required>
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCompany" placeholder="Company Name">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
+        <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+      </form>
+
+      <div class="error-message" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Admin Controls (Only visible to admins) -->
+  <div class="admin-controls hidden" id="adminControls">
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('products')">Product Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('accounts')">Account Management</button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('orders')">Order Management</button>
+    </div>
+
+    <!-- Product Management Tab -->
+    <div class="admin-tab-content active" id="productsTab">
+      <h3>Product Management System</h3>
+      <div class="admin-form">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productBrand" placeholder="Brand/Manufacturer">
+        <input type="number" id="productPrice" placeholder="Price (USD)">
+        <select id="productCategory">
+          <option value="">Select Category</option>
+          <option value="electrical">Electrical Components</option>
+          <option value="automation">Automation & Control</option>
+          <option value="power">Power Distribution</option>
+          <option value="industrial">Industrial Equipment</option>
+          <option value="safety">Safety & Protection</option>
+        </select>
+        <input type="text" id="productDescription" placeholder="Product Description">
+        <button onclick="addProduct()">Add Product</button>
+      </div>
+    </div>
+
+    <!-- Account Management Tab -->
+    <div class="admin-tab-content" id="accountsTab">
+      <h3>Customer Account Management</h3>
+      <div class="accounts-list" id="accountsList">
+        <!-- Customer accounts will be loaded here -->
+      </div>
+    </div>
+
+    <!-- Order Management Tab -->
+    <div class="admin-tab-content" id="ordersTab">
+      <h3>Order Management System</h3>
+      <p>Order management features coming soon...</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
 
